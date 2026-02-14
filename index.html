@@ -22,24 +22,16 @@ body{
     position:relative;
 }
 
-/* Soft center spotlight for readability */
-.center-glow{
-    position:absolute;
-    width:700px;
-    height:700px;
-    background:radial-gradient(circle, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 70%);
-    z-index:1;
-}
-
-/* Golden floating dust */
+/* Floating Golden Dust */
 .particle{
     position:absolute;
     width:8px;
     height:8px;
     background:gold;
     border-radius:50%;
-    box-shadow:0 0 10px gold;
+    box-shadow:0 0 12px gold;
     animation:floatUp 12s linear infinite;
+    opacity:0.8;
 }
 
 @keyframes floatUp{
@@ -49,22 +41,23 @@ body{
     100%{transform:translateY(-100vh); opacity:0;}
 }
 
-/* Content */
+/* Main Content */
 .container{
     position:relative;
     z-index:2;
     max-width:600px;
     padding:20px;
-    color:white;
 }
 
+/* Name */
 .name{
     font-family:'Great Vibes', cursive;
-    font-size:70px;
-    color:#ffd700;
-    text-shadow:0 0 15px rgba(0,0,0,0.8);
+    font-size:72px;
+    color:#d4af37;
+    text-shadow:0 3px 10px rgba(0,0,0,0.3);
 }
 
+/* Cake */
 .cake{
     font-size:40px;
     margin:10px 0;
@@ -76,39 +69,45 @@ body{
     50%{transform:translateY(-8px);}
 }
 
+/* Headline */
 h2{
-    font-weight:500;
-    text-shadow:0 0 10px rgba(0,0,0,0.8);
+    font-weight:600;
+    color:#333;
+    margin-bottom:15px;
 }
 
+/* Image */
 img{
     width:170px;
     height:170px;
     object-fit:cover;
     border-radius:50%;
-    border:3px solid gold;
+    border:3px solid #d4af37;
     margin:20px 0;
 }
 
+/* Message */
 .message{
     font-size:16px;
     line-height:1.6;
     margin-bottom:25px;
-    text-shadow:0 0 8px rgba(0,0,0,0.8);
+    color:#444;
 }
 
+/* Button */
 button{
     padding:12px 30px;
     border:none;
     border-radius:30px;
-    background:gold;
-    color:black;
+    background:#d4af37;
+    color:white;
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
 }
 
 button:hover{
+    background:#b9962f;
     transform:scale(1.05);
 }
 
@@ -116,10 +115,10 @@ button:hover{
     margin-top:20px;
     display:none;
     font-size:15px;
-    text-shadow:0 0 8px rgba(0,0,0,0.8);
+    color:#333;
 }
 
-/* Mobile Fix */
+/* Mobile Responsive */
 @media(max-width:600px){
     .name{font-size:50px;}
     img{width:140px;height:140px;}
@@ -130,14 +129,12 @@ button:hover{
 
 <body>
 
-<div class="center-glow"></div>
-
-<!-- Golden Dust -->
-<div class="particle" style="left:20%; bottom:0;"></div>
-<div class="particle" style="left:35%; bottom:0; animation-delay:3s;"></div>
-<div class="particle" style="left:50%; bottom:0; animation-delay:6s;"></div>
-<div class="particle" style="left:65%; bottom:0; animation-delay:9s;"></div>
-<div class="particle" style="left:80%; bottom:0; animation-delay:12s;"></div>
+<!-- Golden Dust Particles -->
+<div class="particle" style="left:15%; bottom:0;"></div>
+<div class="particle" style="left:30%; bottom:0; animation-delay:2s;"></div>
+<div class="particle" style="left:45%; bottom:0; animation-delay:4s;"></div>
+<div class="particle" style="left:60%; bottom:0; animation-delay:6s;"></div>
+<div class="particle" style="left:75%; bottom:0; animation-delay:8s;"></div>
 
 <div class="container">
 
