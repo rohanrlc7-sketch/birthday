@@ -17,9 +17,20 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:url('bg.jpg') no-repeat center center/cover;
+    background:url('bg.jpg') no-repeat center top;
+    background-size:cover;
     overflow:hidden;
     position:relative;
+}
+
+/* 🔥 MOBILE BACKGROUND FIX ONLY */
+@media(max-width:600px){
+    body{
+        background-position:center top;
+        background-size:100% auto;
+        align-items:flex-start;
+        padding-top:60px;
+    }
 }
 
 /* Floating Golden Dust */
@@ -52,7 +63,7 @@ body{
 .name{
     font-family:'Allura', cursive;
     font-size:90px;
-    color:#8c6b1f;   /* darker champagne gold */
+    color:#8c6b1f;
     text-shadow:0 3px 12px rgba(255,255,255,0.4);
     margin-bottom:5px;
 }
@@ -116,12 +127,8 @@ button:hover{
     color:#333;
 }
 
-/* Mobile */
+/* Mobile text adjustments */
 @media(max-width:600px){
-    body{
-        align-items:flex-start;
-        padding-top:60px;
-    }
 
     .name{
         font-size:60px;
