@@ -5,146 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Payal 🎂</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     padding:0;
     font-family:'Poppins', sans-serif;
-    background: linear-gradient(135deg,#ffe4ec,#fff3e6);
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
     text-align:center;
+    background: url('bg.jpg') no-repeat center center/cover;
+    position:relative;
 }
 
-/* Floating Balloons */
-.balloon{
-    position:absolute;
-    width:70px;
-    height:90px;
-    border-radius:50%;
-    animation:float 14s infinite ease-in;
-    opacity:0.8;
-}
-.balloon:after{
+/* Dark overlay for readability */
+body::before{
     content:"";
     position:absolute;
-    width:2px;
-    height:40px;
-    background:#555;
-    left:50%;
-    bottom:-40px;
+    inset:0;
+    background:rgba(0,0,0,0.45);
 }
 
-@keyframes float{
-    0%{transform:translateY(0);}
-    100%{transform:translateY(-130vh);}
-}
-
-/* Floating Teddy */
-.teddy{
-    position:absolute;
-    font-size:40px;
-    animation:float 18s infinite ease-in;
-    opacity:0.4;
-}
-
-/* Sparkles */
-.sparkle{
-    position:absolute;
-    font-size:20px;
-    animation:twinkle 2s infinite alternate;
-    opacity:0.6;
-}
-@keyframes twinkle{
-    from{opacity:0.3;}
-    to{opacity:1;}
-}
-
+/* Main content */
 .container{
-    max-width:500px;
-    padding:20px;
+    position:relative;
     z-index:2;
+    max-width:500px;
+    padding:30px;
+    color:white;
 }
 
 .name{
-    font-family:'Great Vibes', cursive;
-    font-size:60px;
-    color:#ff4f81;
-    margin-bottom:5px;
+    font-family:'Playfair Display', serif;
+    font-size:50px;
+    margin-bottom:10px;
 }
 
 .cake{
-    font-size:40px;
-    animation:bounce 2s infinite;
-}
-
-@keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
+    font-size:35px;
+    margin-bottom:10px;
 }
 
 h2{
+    font-weight:400;
     margin:10px 0 20px 0;
-    font-weight:500;
 }
 
 img{
-    width:220px;
-    border-radius:20px;
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid white;
     margin:20px 0;
-    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .message{
-    font-size:16px;
-    line-height:1.7;
+    font-size:15px;
+    line-height:1.6;
     margin-bottom:25px;
 }
 
 button{
-    padding:12px 28px;
+    padding:12px 30px;
     border:none;
     border-radius:30px;
-    background:#ff4f81;
-    color:white;
-    font-size:15px;
+    background:gold;
+    color:black;
+    font-weight:600;
     cursor:pointer;
     transition:0.3s;
 }
 
 button:hover{
-    background:#ff2e6d;
-    transform:scale(1.08);
+    background:#ffd700;
+    transform:scale(1.05);
 }
 
 #wish{
-    margin-top:18px;
+    margin-top:20px;
     display:none;
-    font-size:15px;
-    color:#444;
+    font-size:14px;
 }
 </style>
 </head>
 
 <body>
-
-<!-- Background Balloons -->
-<div class="balloon" style="left:5%; background:#ff6fa5;"></div>
-<div class="balloon" style="left:85%; background:#ffd166; animation-delay:4s;"></div>
-<div class="balloon" style="left:50%; background:#06d6a0; animation-delay:8s;"></div>
-
-<!-- Floating Teddies -->
-<div class="teddy" style="left:10%; animation-delay:2s;">🧸</div>
-<div class="teddy" style="right:10%; animation-delay:6s;">🧸</div>
-
-<!-- Sparkles -->
-<div class="sparkle" style="top:20%; left:25%;">✨</div>
-<div class="sparkle" style="bottom:20%; right:30%;">✨</div>
 
 <div class="container">
 
@@ -156,14 +106,14 @@ button:hover{
     <img src="photo.jpg" alt="Payal">
 
     <div class="message">
-        28 February — A beautiful day for a beautiful soul 🌸<br><br>
+        28 February — A beautiful day for a beautiful soul ✨<br><br>
         Wishing you happiness, confidence, success and endless smiles today and always.
     </div>
 
-    <button onclick="celebrate()">Celebrate 🎈</button>
+    <button onclick="celebrate()">Celebrate</button>
 
     <div id="wish">
-        May this year bring you new dreams, bright moments and lots of cake ✨
+        May this year bring you golden moments and unforgettable memories 🌟
     </div>
 
 </div>
