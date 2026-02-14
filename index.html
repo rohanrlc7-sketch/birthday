@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Payal 🎂</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -25,13 +25,13 @@ body{
 /* Floating Golden Dust */
 .particle{
     position:absolute;
-    width:8px;
-    height:8px;
-    background:gold;
+    width:7px;
+    height:7px;
+    background:#d4af37;
     border-radius:50%;
-    box-shadow:0 0 12px gold;
-    animation:floatUp 14s linear infinite;
-    opacity:0.9;
+    box-shadow:0 0 10px #d4af37;
+    animation:floatUp 15s linear infinite;
+    opacity:0.8;
 }
 
 @keyframes floatUp{
@@ -48,21 +48,27 @@ body{
     padding:30px 20px;
 }
 
-/* PAYAL NAME */
+/* PAYAL */
 .name{
-    font-family:'Great Vibes', cursive;
-    font-size:78px;
-    background:linear-gradient(45deg,#f7e7a9,#d4af37,#b8860b);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    text-shadow:0 4px 15px rgba(0,0,0,0.35);
+    font-family:'Allura', cursive;
+    font-size:90px;
+    color:#8c6b1f;   /* darker champagne gold */
+    text-shadow:0 3px 12px rgba(255,255,255,0.4);
     margin-bottom:5px;
+}
+
+/* HAPPY BIRTHDAY */
+.hbd{
+    font-family:'Allura', cursive;
+    font-size:55px;
+    color:#3a3a3a;
+    margin:15px 0;
 }
 
 /* Cake */
 .cake{
-    font-size:42px;
-    margin:12px 0;
+    font-size:38px;
+    margin:10px 0;
     animation:bounce 2s infinite;
 }
 
@@ -71,38 +77,27 @@ body{
     50%{transform:translateY(-8px);}
 }
 
-/* HAPPY BIRTHDAY */
-h2{
-    font-family:'Playfair Display', serif;
-    font-size:34px;
-    color:#2c2c2c;
-    margin-bottom:20px;
-}
-
-/* Image */
 img{
-    width:180px;
-    height:180px;
+    width:170px;
+    height:170px;
     object-fit:cover;
     border-radius:50%;
     border:4px solid #d4af37;
     margin:20px 0;
 }
 
-/* Message */
 .message{
     font-size:17px;
     line-height:1.7;
     margin-bottom:30px;
-    color:#333;
+    color:#2f2f2f;
 }
 
-/* Button */
 button{
     padding:14px 36px;
     border:none;
     border-radius:30px;
-    background:linear-gradient(45deg,#d4af37,#b8860b);
+    background:#b8860b;
     color:white;
     font-weight:600;
     font-size:16px;
@@ -121,7 +116,7 @@ button:hover{
     color:#333;
 }
 
-/* Mobile Optimization */
+/* Mobile */
 @media(max-width:600px){
     body{
         align-items:flex-start;
@@ -129,11 +124,11 @@ button:hover{
     }
 
     .name{
-        font-size:54px;
+        font-size:60px;
     }
 
-    h2{
-        font-size:24px;
+    .hbd{
+        font-size:40px;
     }
 
     img{
@@ -156,20 +151,19 @@ button:hover{
 
 <body>
 
-<!-- Floating Dust -->
-<div class="particle" style="left:10%; bottom:0;"></div>
-<div class="particle" style="left:25%; bottom:0; animation-delay:2s;"></div>
-<div class="particle" style="left:40%; bottom:0; animation-delay:4s;"></div>
-<div class="particle" style="left:60%; bottom:0; animation-delay:6s;"></div>
-<div class="particle" style="left:75%; bottom:0; animation-delay:8s;"></div>
-<div class="particle" style="left:90%; bottom:0; animation-delay:10s;"></div>
+<!-- Golden Dust -->
+<div class="particle" style="left:15%; bottom:0;"></div>
+<div class="particle" style="left:30%; bottom:0; animation-delay:3s;"></div>
+<div class="particle" style="left:45%; bottom:0; animation-delay:6s;"></div>
+<div class="particle" style="left:65%; bottom:0; animation-delay:9s;"></div>
+<div class="particle" style="left:80%; bottom:0; animation-delay:12s;"></div>
 
 <div class="container">
 
     <div class="name">Payal</div>
     <div class="cake">🎂</div>
 
-    <h2>Happy Birthday 🎉</h2>
+    <div class="hbd">Happy Birthday 🎉</div>
 
     <img src="photo.jpg" alt="Payal">
 
