@@ -3,100 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday ❤️</title>
+<title>Happy Birthday Payal 🎂</title>
 
 <style>
 body {
     margin:0;
     padding:0;
-    font-family: Arial, sans-serif;
     text-align:center;
-    background: linear-gradient(to right, #ffe0f0, #fff5e6);
-    overflow-x:hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffe6f2, #fff0e6);
+    overflow:hidden;
 }
 
-h1 {
-    margin-top:50px;
-    font-size:40px;
+/* Floating Balloons */
+.balloon {
+    position:absolute;
+    bottom:-150px;
+    width:50px;
+    animation:float 10s infinite ease-in;
+}
+@keyframes float {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-120vh);}
 }
 
-.doodle span {
-    font-size:50px;
+/* Glitter stars */
+.star {
+    position:absolute;
+    color:white;
+    font-size:20px;
+    animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle {
+    from {opacity:0.3;}
+    to {opacity:1;}
+}
+
+/* Name Doodle */
+.name span {
+    font-size:55px;
     font-weight:bold;
     display:inline-block;
-    animation:bounce 2s infinite;
 }
+.name span:nth-child(1){color:#4285F4;}
+.name span:nth-child(2){color:#EA4335;}
+.name span:nth-child(3){color:#FBBC05;}
+.name span:nth-child(4){color:#34A853;}
+.name span:nth-child(5){color:#EA4335;}
 
-.doodle span:nth-child(1){color:#4285F4;}
-.doodle span:nth-child(2){color:#EA4335;}
-.doodle span:nth-child(3){color:#FBBC05;}
-.doodle span:nth-child(4){color:#34A853;}
-
-@keyframes bounce {
-    0%,100% {transform:translateY(0);}
-    50% {transform:translateY(-10px);}
+h2 {
+    margin-top:20px;
+    font-size:28px;
 }
 
 img {
-    width:250px;
+    width:220px;
     border-radius:20px;
-    margin-top:30px;
+    margin-top:25px;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .message {
-    margin-top:30px;
-    font-size:20px;
-    padding:0 20px;
+    margin:25px;
+    font-size:18px;
 }
 
 button {
-    margin-top:30px;
     padding:12px 25px;
-    font-size:16px;
     border:none;
     border-radius:30px;
-    background:#ff4da6;
+    background:#ff66a3;
     color:white;
+    font-size:16px;
     cursor:pointer;
 }
 
 button:hover {
-    background:#ff1a8c;
+    background:#ff3385;
 }
 </style>
 </head>
 
 <body>
 
-<div class="doodle">
-    <span>H</span>
-    <span>B</span>
-    <span>D</span>
-    <span>🎂</span>
+<!-- Balloons -->
+<img src="https://i.imgur.com/7Qp7Z9B.png" class="balloon" style="left:10%;">
+<img src="https://i.imgur.com/7Qp7Z9B.png" class="balloon" style="left:30%; animation-delay:2s;">
+<img src="https://i.imgur.com/7Qp7Z9B.png" class="balloon" style="left:70%; animation-delay:4s;">
+
+<!-- Glitter -->
+<div class="star" style="top:20%; left:15%;">✨</div>
+<div class="star" style="top:40%; left:80%;">✨</div>
+<div class="star" style="top:70%; left:25%;">✨</div>
+
+<!-- Name -->
+<div class="name" style="margin-top:60px;">
+<span>P</span>
+<span>A</span>
+<span>Y</span>
+<span>A</span>
+<span>L</span>
 </div>
 
-<h1>Happy Birthday Beautiful</h1>
+<h2>Happy Birthday Payal 🎉</h2>
 
-<img src="PUT_IMAGE_LINK_HERE" alt="Her Image">
+<img src="photo.jpg" alt="Payal">
 
 <div class="message">
-    28 February — The day the world quietly upgraded ❤️<br><br>
-    I’m really grateful that our paths crossed this year.
+28 February — A special day for a special person 🌸<br><br>
+Wishing you happiness, success, laughter and everything beautiful today and always.
 </div>
 
-<button onclick="showMessage()">Click if you're smiling 😊</button>
+<button onclick="celebrate()">Celebrate 🎈</button>
 
-<p id="hiddenMessage" style="display:none; margin-top:20px; font-size:18px;">
-You just made my day again 💫
+<p id="wish" style="display:none; margin-top:20px; font-size:18px;">
+May this year bring you endless smiles ✨
 </p>
 
+<!-- Teddy -->
+<img src="https://i.imgur.com/6RL5Y1F.png" style="position:absolute; bottom:10px; right:10px; width:120px;">
+
 <script>
-function showMessage(){
-    document.getElementById("hiddenMessage").style.display="block";
+function celebrate(){
+    document.getElementById("wish").style.display="block";
 }
 </script>
 
 </body>
 </html>
-
