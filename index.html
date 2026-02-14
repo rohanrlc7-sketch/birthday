@@ -27,7 +27,8 @@ body{
     width:70px;
     height:90px;
     border-radius:50%;
-    animation:float 12s infinite ease-in;
+    animation:float 14s infinite ease-in;
+    opacity:0.8;
 }
 .balloon:after{
     content:"";
@@ -41,12 +42,33 @@ body{
 
 @keyframes float{
     0%{transform:translateY(0);}
-    100%{transform:translateY(-120vh);}
+    100%{transform:translateY(-130vh);}
+}
+
+/* Floating Teddy */
+.teddy{
+    position:absolute;
+    font-size:40px;
+    animation:float 18s infinite ease-in;
+    opacity:0.4;
+}
+
+/* Sparkles */
+.sparkle{
+    position:absolute;
+    font-size:20px;
+    animation:twinkle 2s infinite alternate;
+    opacity:0.6;
+}
+@keyframes twinkle{
+    from{opacity:0.3;}
+    to{opacity:1;}
 }
 
 .container{
     max-width:500px;
     padding:20px;
+    z-index:2;
 }
 
 .name{
@@ -111,9 +133,18 @@ button:hover{
 
 <body>
 
-<!-- Subtle Balloons -->
-<div class="balloon" style="left:8%; background:#ff6fa5;"></div>
+<!-- Background Balloons -->
+<div class="balloon" style="left:5%; background:#ff6fa5;"></div>
 <div class="balloon" style="left:85%; background:#ffd166; animation-delay:4s;"></div>
+<div class="balloon" style="left:50%; background:#06d6a0; animation-delay:8s;"></div>
+
+<!-- Floating Teddies -->
+<div class="teddy" style="left:10%; animation-delay:2s;">🧸</div>
+<div class="teddy" style="right:10%; animation-delay:6s;">🧸</div>
+
+<!-- Sparkles -->
+<div class="sparkle" style="top:20%; left:25%;">✨</div>
+<div class="sparkle" style="bottom:20%; right:30%;">✨</div>
 
 <div class="container">
 
