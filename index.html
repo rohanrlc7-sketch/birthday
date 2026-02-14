@@ -22,58 +22,54 @@ body{
     position:relative;
 }
 
-/* Soft Gold Overlay */
-body::after{
-    content:"";
+/* Floating Golden Light Bubbles */
+.bubble{
     position:absolute;
-    inset:0;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(255,223,0,0.6) 0%, rgba(255,223,0,0.2) 40%, rgba(255,223,0,0) 70%);
+    animation: floatUp 18s linear infinite;
+    opacity:0.7;
 }
 
-/* Golden Dust Particles */
+@keyframes floatUp{
+    0%{transform: translateY(0) scale(0.8); opacity:0;}
+    25%{opacity:0.6;}
+    50%{opacity:0.8;}
+    75%{opacity:0.6;}
+    100%{transform: translateY(-120vh) scale(1.2); opacity:0;}
+}
+
+/* Small Gold Dust Particles */
 .particle{
     position:absolute;
     width:6px;
     height:6px;
     background:gold;
     border-radius:50%;
-    opacity:0.7;
-    animation: floatUp 10s linear infinite;
+    animation: dust 12s linear infinite;
+    opacity:0.6;
 }
 
-@keyframes floatUp{
+@keyframes dust{
     0%{transform:translateY(0); opacity:0;}
     50%{opacity:1;}
     100%{transform:translateY(-100vh); opacity:0;}
-}
-
-/* Golden Light Bubbles */
-.bubble{
-    position:absolute;
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:radial-gradient(circle, rgba(255,215,0,0.6) 0%, rgba(255,215,0,0) 70%);
-    animation: pulse 6s infinite ease-in-out;
-}
-
-@keyframes pulse{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.2);}
 }
 
 /* Content */
 .container{
     position:relative;
     z-index:2;
-    max-width:500px;
+    max-width:600px;
     padding:20px;
     color:white;
 }
 
 .name{
     font-family:'Great Vibes', cursive;
-    font-size:70px;
+    font-size:75px;
     color:#ffd700;
     margin-bottom:10px;
 }
@@ -101,11 +97,10 @@ img{
     border-radius:50%;
     border:3px solid gold;
     margin:20px 0;
-    box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .message{
-    font-size:15px;
+    font-size:16px;
     line-height:1.6;
     margin-bottom:25px;
 }
@@ -136,15 +131,16 @@ button:hover{
 
 <body>
 
-<!-- Golden Light Bubbles -->
-<div class="bubble" style="top:20%; left:10%;"></div>
-<div class="bubble" style="bottom:20%; right:15%;"></div>
+<!-- Floating Yellow Light Bubbles -->
+<div class="bubble" style="left:10%; bottom:-100px;"></div>
+<div class="bubble" style="left:80%; bottom:-150px; animation-delay:5s;"></div>
+<div class="bubble" style="left:50%; bottom:-200px; animation-delay:10s;"></div>
 
-<!-- Golden Dust -->
-<div class="particle" style="left:20%; animation-delay:1s;"></div>
-<div class="particle" style="left:40%; animation-delay:3s;"></div>
-<div class="particle" style="left:60%; animation-delay:5s;"></div>
-<div class="particle" style="left:80%; animation-delay:7s;"></div>
+<!-- Floating Gold Dust -->
+<div class="particle" style="left:20%; bottom:0;"></div>
+<div class="particle" style="left:40%; bottom:0; animation-delay:3s;"></div>
+<div class="particle" style="left:60%; bottom:0; animation-delay:6s;"></div>
+<div class="particle" style="left:75%; bottom:0; animation-delay:9s;"></div>
 
 <div class="container">
 
